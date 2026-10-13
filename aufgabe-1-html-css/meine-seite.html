@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WT Taekwondo</title>
+  <style>
+    :root {
+      --primary: #ff280c;
+      --hell: #eef4fa;
+      --text: #1d2733;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 3;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--hell);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1.5rem 1rem;
+    }
+
+    header h1 {
+      margin: 0 0 1rem;
+    }
+
+    /* Flexbox: Navigation */
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      border-bottom-color: white;
+    }
+
+    main {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    h2 {
+      color: var(--primary);
+    }
+
+    /* Box-Modell: padding, margin, border */
+    section {
+      margin-bottom: 2rem;
+      padding: 1.25rem;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      background: white;
+    }
+
+    /* Eigene Klasse + Flexbox: Karten nebeneinander */
+    .karten {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .karte {
+      flex: 1;
+      padding: 1rem;
+      border: 1px solid var(--primary);
+      border-left: 6px solid var(--primary);
+      border-radius: 6px;
+      background: var(--hell);
+    }
+
+    .karte h3 {
+      margin-top: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Media Query: Karten untereinander auf kleinen Bildschirmen */
+    @media (max-width: 700px) {
+      .karten {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Willkommen zum WT Taekwondo!</h1>
+    <nav>
+      <a href="#sport">Der Sport</a>
+      <a href="#guertel">Die Gürtel</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sport">
+      <h2>Der Sport</h2>
+      <p>
+       Taekwondo ist eine Abspaltung von Karate, welche in Südkorea entstanden ist. Der Name bedeutet 
+       übersetzt "Der Weg des Fuß- und Faustkampfes". Dabei werden zwar Füße und Hände zum kämpfen benutzt
+       , dennoch werden die Füße überwiegend mehr utilisiert.
+
+       WT Taekwondo wird in zwei bestadteile aufgeteilt:
+
+      </p>
+
+      <ul>
+        <li>Poomsae (eine Art Kampfchoreo)</li>
+        <li>Kyorugi (Vollkontakt kämpfen)</li>
+      </ul>
+
+    </section>
+
+    <section id="guertel">
+      <h2>Die Gürtel</h2>
+      <div class="karten">
+        <div class="karte">
+          <h3>Die Farben und deren Bedeutung</h3>
+          <p>
+             <ul>
+                <li>Weiß: wird von Anfängern getragen, die noch unwissend sind und dem Taekwondo offen und wissbegierig gegenüberstehen.</li>
+                <li>Gelb: steht für fruchtbaren Erdboden, auf dem Wissen und Können gedeihen sollen.</li>
+                <li>Grün: symbolisiert die ersten Sprösslinge und Früchte, Zeichen dafür, dass sich die Trainingsanstrengungen gelohnt haben und etwas im Schüler heranreift.</li>
+                <li>Blau: steht für den Himmel und somit sinnbildlich für eine Grenze. Der Schüler muss nun zeigen, dass er in der Lage ist, Höheres anzustreben und auch zu erreichen.</li>
+                <li>Braun: symbolisiert die Borke des Baumstammes, was bedeutet, dass die Techniken sich bereits gefestigt haben.</li>
+                <li>Rot: repräsentiert die Sonne, von der schon eine große Kraft ausgeht, dient dem Schüler aber auch als Signal. Er steht nun kurz davor, Meister zu werden, und wird angehalten, sich noch intensiver und ausdauernder mit dem Taekwondo zu beschäftigen</li>
+                <li>Schwarz: Symbol für das Weltall, vereinigt alle anderen Farben in sich und ist somit die stärkste aller Farben. Schwarz soll auch die Autorität, das Wissen und die Erfahrung der Meister symbolisieren. </li>
+             </ul>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sestan Laura – gemacht mit HTML und CSS</p>
+  </footer>
+
+</body>
+</html>
